@@ -1,0 +1,19 @@
+<h3 class="product-name">{{model.name}}</h3>
+<ul>
+  {{#each model.details as |detail|}}
+    {{product-detail-listing detail=detail action=(action 'removeAssociation')}}
+  {{else}}
+    <li>No associated detail</li>
+  {{/each}}
+</ul>
+<div class="button-group">
+  {{#link-to "products.index" class="btn btn-secondary"}}
+    Add Product
+  {{/link-to}}
+  {{#link-to "products.edit" model class="btn btn-primary"}}
+    Edit Product
+  {{/link-to}}
+  {{#bs-button type="danger" onClick=(action "deleteProduct")}}
+    Delete Product
+  {{/bs-button}}
+</div>

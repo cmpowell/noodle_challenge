@@ -1,0 +1,4 @@
+{
+  "src/tests/test_products.py": true,
+  "tests/test_noodle.py::test_show_attribute_by_id": true
+}

@@ -1,0 +1,4 @@
+{{#bs-form formLayout="inline" model=this onSubmit=(action "addDetail") as |form|}}
+  {{form.element controlType="name" placeholder="Name" property="name" required=true value=value class="detail-name"}}
+  {{bs-button defaultText="Add Detail" type="primary" buttonType="submit" class="add-button"}}
+{{/bs-form}}

@@ -1,0 +1,9 @@
+{{#bs-form formLayout="vertical" model=this onSubmit=(action "addProduct") as |form|}}
+  {{form.element controlType="text" placeholder="Name" property="name" class="product-name" required=true value=productName}}
+  {{#form.element}}
+    {{#power-select-multiple options=availableDetails selected=selectedDetails placeholder="Select some details..." onchange=(action (mut selectedDetails)) as |detail|}}
+      {{detail.name}}
+    {{/power-select-multiple}}
+  {{/form.element}}
+  {{bs-button defaultText="Add Product" type="primary" buttonType="submit" class="add-button"}}
+{{/bs-form}}

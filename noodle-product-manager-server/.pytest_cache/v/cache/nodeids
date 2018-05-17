@@ -1,0 +1,7 @@
+[
+  "tests/test_factory.py::test_config",
+  "tests/test_noodle.py::test_create_product",
+  "tests/test_noodle.py::test_show_product_list",
+  "tests/test_noodle.py::test_create_detail",
+  "tests/test_noodle.py::test_show_detail_list"
+]

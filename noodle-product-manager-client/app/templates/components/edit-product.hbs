@@ -1,0 +1,9 @@
+{{#bs-form formLayout="vertical" model=this onSubmit=(action "editProduct") as |form|}}
+  {{form.element controlType="name" placeholder="Name" property="name" class="product-name" required=true value=name}}
+  {{#form.element}}
+    {{#power-select-multiple options=availableDetails selected=selectedDetails placeholder="Select some details..." onchange=(action (mut selectedDetails)) as |detail|}}
+      {{detail.name}}
+    {{/power-select-multiple}}
+  {{/form.element}}
+  {{bs-button defaultText="Save" type="primary" buttonType="submit" class="edit-button"}}
+{{/bs-form}}

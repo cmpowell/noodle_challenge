@@ -1,0 +1,13 @@
+<h2>Details</h2>
+<div class="row">
+  <div class="col-sm">
+    <ul class="existing-detail">
+      {{#each model as |detail|}}
+        {{detail-listing detail=detail}}
+      {{/each}}
+    </ul>
+  </div>
+  <div class="col-sm">
+    {{outlet}}
+  </div>
+</div>
